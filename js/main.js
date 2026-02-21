@@ -23,10 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
         form.addEventListener("submit", function (e) {
             e.preventDefault();
 
-            var name = document.getElementById("name").value.trim();
-            var phone = document.getElementById("phone").value.trim();
+            var userName = document.getElementById("name").value.trim();
+            var userPhone = document.getElementById("phone").value.trim();
 
-            if (!name || !phone) {
+            if (!userName || !userPhone) {
+                if (!userName) document.getElementById("name").focus();
+                else document.getElementById("phone").focus();
                 return;
             }
 
