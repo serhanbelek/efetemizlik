@@ -223,28 +223,32 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Auto-slide every 5 seconds
-    var autoSlide = setInterval(function () {
-        if (cards.length > 0) {
-            currentSlide = currentSlide < cards.length - 1 ? currentSlide + 1 : 0;
-            goToSlide(currentSlide);
-        }
-    }, 5000);
+    function startAutoSlide() {
+        return setInterval(function () {
+            if (cards.length > 0) {
+                currentSlide = currentSlide < cards.length - 1 ? currentSlide + 1 : 0;
+                goToSlide(currentSlide);
+            }
+        }, 5000);
+    }
+
+    var autoSlideTimer = startAutoSlide();
 
     // Pause auto-slide on hover
     var sliderEl = document.querySelector('.testimonials-slider');
     if (sliderEl) {
         sliderEl.addEventListener('mouseenter', function () {
-            clearInterval(autoSlide);
+            clearInterval(autoSlideTimer);
         });
         sliderEl.addEventListener('mouseleave', function () {
-            autoSlide = setInterval(function () {
-                if (cards.length > 0) {
-                    currentSlide = currentSlide < cards.length - 1 ? currentSlide + 1 : 0;
-                    goToSlide(currentSlide);
-                }
-            }, 5000);
+            autoSlideTimer = startAutoSlide();
         });
     }
+
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', function () {
+        clearInterval(autoSlideTimer);
+    });
 
     // ============================================
     // FAQ Accordion
