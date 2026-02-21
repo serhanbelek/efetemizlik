@@ -4,1463 +4,1562 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <!-- SEO Meta Etiketleri -->
   <title>Efe Temizlik | Beykoz İstanbul Profesyonel Temizlik Hizmetleri</title>
   <meta name="description" content="Efe Temizlik - Beykoz, İstanbul'un en güvenilir temizlik firması. Ev, ofis, inşaat sonrası, derin temizlik ve daha fazlası. Hemen arayın: 0535 220 10 14" />
   <meta name="keywords" content="temizlik, Beykoz temizlik, İstanbul temizlik, ev temizliği, ofis temizliği, inşaat sonrası temizlik, derin temizlik, cam temizliği, halı yıkama, koltuk yıkama, apartman temizliği, Efe Temizlik" />
   <meta name="author" content="Efe Temizlik" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://efetemizlik.com.tr/" />
-
-  <!-- Open Graph Meta Etiketleri -->
   <meta property="og:title" content="Efe Temizlik | Beykoz İstanbul Profesyonel Temizlik Hizmetleri" />
   <meta property="og:description" content="Beykoz'un en güvenilir temizlik firması. Ev, ofis, inşaat sonrası temizlik ve daha fazlası. 0535 220 10 14" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://efetemizlik.com.tr/" />
   <meta property="og:locale" content="tr_TR" />
   <meta property="og:site_name" content="Efe Temizlik" />
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
   <style>
-    /* ===== CSS VARIABLES ===== */
+    /* ===================================================
+       CSS VARIABLES
+    =================================================== */
     :root {
-      --primary: #1a73e8;
-      --primary-dark: #1558b0;
+      --primary:       #1a73e8;
+      --primary-dark:  #1256c0;
       --primary-light: #e8f0fe;
-      --secondary: #27ae60;
-      --secondary-dark: #1e8449;
-      --secondary-light: #d5f5e3;
-      --white: #ffffff;
-      --light-gray: #f8f9fa;
-      --gray: #6c757d;
-      --dark: #212529;
-      --text: #343a40;
-      --border: #dee2e6;
-      --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
-      --radius: 12px;
-      --radius-sm: 8px;
-      --transition: all 0.3s ease;
-      --font: 'Poppins', sans-serif;
+      --secondary:     #00c853;
+      --secondary-dark:#00a040;
+      --secondary-light:#e8fdf0;
+      --accent:        #ff6b35;
+      --accent-light:  #fff3ee;
+      --purple:        #7b2ff7;
+      --purple-light:  #f3eaff;
+      --gold:          #f59e0b;
+      --gold-light:    #fffbeb;
+      --white:         #ffffff;
+      --off-white:     #f8faff;
+      --light:         #f1f5f9;
+      --gray:          #64748b;
+      --dark:          #0f172a;
+      --text:          #1e293b;
+      --border:        #e2e8f0;
+      --shadow-sm:     0 2px 8px rgba(0,0,0,.06);
+      --shadow:        0 4px 24px rgba(0,0,0,.10);
+      --shadow-md:     0 8px 32px rgba(0,0,0,.13);
+      --shadow-lg:     0 20px 60px rgba(0,0,0,.18);
+      --radius-sm:     8px;
+      --radius:        16px;
+      --radius-lg:     24px;
+      --radius-xl:     32px;
+      --transition:    all .3s cubic-bezier(.4,0,.2,1);
+      --font:          'Poppins', sans-serif;
+      --top-bar-height: 40px;
+      --stats-overlap:  40px; /* how far the stats strip overlaps the hero bottom */
     }
 
-    /* ===== RESET & BASE ===== */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
-
-    body {
-      font-family: var(--font);
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    section {
-      padding: 80px 0;
-    }
+    /* ===================================================
+       RESET & BASE
+    =================================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--text); background: var(--white); line-height: 1.6; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    section { position: relative; }
 
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 24px;
     }
 
-    .section-title {
+    /* ===================================================
+       TYPOGRAPHY HELPERS
+    =================================================== */
+    .section-header {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 56px;
     }
-
-    .section-title h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 12px;
-      position: relative;
-      display: inline-block;
-    }
-
-    .section-title h2::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 4px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 2px;
-    }
-
-    .section-title p {
-      font-size: 1.05rem;
-      color: var(--gray);
-      max-width: 600px;
-      margin: 20px auto 0;
-    }
-
-    .btn {
+    .section-label {
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+    .section-header h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section-header h2 span { color: var(--primary); }
+    .section-header p {
+      font-size: 1.05rem;
+      color: var(--gray);
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    /* ===================================================
+       BUTTONS
+    =================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
       padding: 14px 28px;
       border-radius: 50px;
       font-family: var(--font);
-      font-size: 0.95rem;
-      font-weight: 600;
+      font-size: .95rem;
+      font-weight: 700;
       cursor: pointer;
       border: none;
       transition: var(--transition);
       text-decoration: none;
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
     }
-
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,.15);
+      opacity: 0;
+      transition: opacity .2s;
+    }
+    .btn:hover::after { opacity: 1; }
     .btn-primary {
-      background: var(--primary);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: var(--white);
+      box-shadow: 0 4px 20px rgba(26,115,232,.35);
     }
-
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(26, 115, 232, 0.4);
-    }
-
-    .btn-secondary {
-      background: var(--secondary);
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(26,115,232,.5); }
+    .btn-green {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
       color: var(--white);
+      box-shadow: 0 4px 20px rgba(0,200,83,.35);
     }
-
-    .btn-secondary:hover {
-      background: var(--secondary-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 2px solid var(--white);
-    }
-
-    .btn-outline:hover {
+    .btn-green:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,200,83,.5); }
+    .btn-white {
       background: var(--white);
       color: var(--primary);
-      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0,0,0,.12);
+    }
+    .btn-white:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,.2); }
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,.7);
+    }
+    .btn-outline-white:hover { background: var(--white); color: var(--primary); transform: translateY(-3px); }
+    .btn-lg { padding: 17px 36px; font-size: 1.05rem; }
+    .btn-icon {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border-radius: 50%;
+      justify-content: center;
     }
 
-    /* ===== ANIMATIONS ===== */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    /* ===================================================
+       ANIMATIONS
+    =================================================== */
+    @keyframes fadeInUp   { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeIn     { from { opacity:0; } to { opacity:1; } }
+    @keyframes float      { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-12px); } }
+    @keyframes float2     { 0%,100% { transform:translateY(0) rotate(0); } 50% { transform:translateY(-8px) rotate(3deg); } }
+    @keyframes spin       { to { transform:rotate(360deg); } }
+    @keyframes pulse-ring {
+      0%   { transform:scale(.9); opacity:.8; }
+      70%  { transform:scale(1.3); opacity:0; }
+      100% { transform:scale(1.3); opacity:0; }
     }
-
-    @keyframes fadeInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
+    @keyframes shimmer {
+      0%   { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
     }
-
-    @keyframes fadeInRight {
-      from {
-        opacity: 0;
-        transform: translateX(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
-
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    .animate-fadeInUp {
-      animation: fadeInUp 0.7s ease forwards;
-    }
-
-    .animate-delay-1 { animation-delay: 0.1s; }
-    .animate-delay-2 { animation-delay: 0.2s; }
-    .animate-delay-3 { animation-delay: 0.3s; }
+    @keyframes slideInLeft  { from { opacity:0; transform:translateX(-60px); } to { opacity:1; transform:translateX(0); } }
+    @keyframes slideInRight { from { opacity:0; transform:translateX(60px); }  to { opacity:1; transform:translateX(0); } }
+    @keyframes countUp     { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
 
     .scroll-animate {
       opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(36px);
+      transition: opacity .65s cubic-bezier(.4,0,.2,1), transform .65s cubic-bezier(.4,0,.2,1);
     }
+    .scroll-animate.visible { opacity:1; transform:translateY(0); }
+    .scroll-animate.delay-1 { transition-delay: .1s; }
+    .scroll-animate.delay-2 { transition-delay: .2s; }
+    .scroll-animate.delay-3 { transition-delay: .3s; }
+    .scroll-animate.delay-4 { transition-delay: .4s; }
+    .scroll-animate.delay-5 { transition-delay: .5s; }
+    .scroll-animate.delay-6 { transition-delay: .6s; }
+    .scroll-animate.delay-7 { transition-delay: .7s; }
+    .scroll-animate.delay-8 { transition-delay: .8s; }
 
-    .scroll-animate.visible {
-      opacity: 1;
-      transform: translateY(0);
+    /* ===================================================
+       ANNOUNCEMENT BAR
+    =================================================== */
+    #top-bar {
+      background: linear-gradient(90deg, #0d47a1 0%, #1a73e8 50%, #00897b 100%);
+      color: rgba(255,255,255,.92);
+      font-size: .82rem;
+      font-weight: 500;
+      padding: 9px 0;
+      text-align: center;
+      position: relative;
+      z-index: 1001;
     }
+    .top-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .top-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .top-bar-item a { color: inherit; font-weight: 600; transition: opacity .2s; }
+    .top-bar-item a:hover { opacity: .8; }
+    .top-bar-divider { opacity: .3; }
 
-    /* ===== NAVBAR ===== */
+    /* ===================================================
+       NAVBAR
+    =================================================== */
     #navbar {
-      position: fixed;
+      position: sticky;
       top: 0;
-      left: 0;
-      right: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0,0,0,.06);
       transition: var(--transition);
     }
-
     #navbar.scrolled {
-      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 4px 28px rgba(0,0,0,.12);
     }
-
     .nav-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      height: 70px;
+      height: 72px;
+      gap: 16px;
     }
-
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--primary);
+      gap: 12px;
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--dark);
       text-decoration: none;
+      flex-shrink: 0;
     }
-
     .nav-logo-icon {
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 10px;
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary), #00897b);
+      border-radius: 13px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      box-shadow: 0 4px 14px rgba(26,115,232,.35);
+      flex-shrink: 0;
     }
-
+    .nav-logo-text { line-height: 1.15; }
+    .nav-logo-text small {
+      display: block;
+      font-size: .68rem;
+      font-weight: 500;
+      color: var(--gray);
+      letter-spacing: .02em;
+    }
     .nav-menu {
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 2px;
     }
-
     .nav-menu a {
-      padding: 8px 12px;
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: var(--text);
+      padding: 8px 13px;
+      font-size: .84rem;
+      font-weight: 600;
+      color: var(--gray);
       border-radius: var(--radius-sm);
       transition: var(--transition);
       white-space: nowrap;
     }
-
-    .nav-menu a:hover,
-    .nav-menu a.active {
+    .nav-menu a:hover, .nav-menu a.active {
       color: var(--primary);
       background: var(--primary-light);
     }
-
-    .nav-phone {
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .nav-phone-btn {
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 9px 18px;
-      background: var(--primary);
+      padding: 10px 20px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: var(--white);
       border-radius: 50px;
-      font-size: 0.85rem;
-      font-weight: 600;
+      font-size: .85rem;
+      font-weight: 700;
       transition: var(--transition);
       text-decoration: none;
+      box-shadow: 0 4px 14px rgba(26,115,232,.3);
     }
-
-    .nav-phone:hover {
-      background: var(--primary-dark);
-      transform: translateY(-1px);
-      color: var(--white);
-    }
-
+    .nav-phone-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,115,232,.45); color: var(--white); }
     .hamburger {
       display: none;
       flex-direction: column;
       gap: 5px;
       cursor: pointer;
-      padding: 5px;
+      padding: 8px;
       background: none;
-      border: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
     }
-
     .hamburger span {
       display: block;
-      width: 24px;
-      height: 2.5px;
+      width: 22px;
+      height: 2px;
       background: var(--dark);
       border-radius: 2px;
       transition: var(--transition);
     }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    .hamburger.open span:nth-child(1) {
-      transform: translateY(7.5px) rotate(45deg);
-    }
-
-    .hamburger.open span:nth-child(2) {
-      opacity: 0;
-      transform: scaleX(0);
-    }
-
-    .hamburger.open span:nth-child(3) {
-      transform: translateY(-7.5px) rotate(-45deg);
-    }
-
+    /* Mobile menu */
     .mobile-menu {
       display: none;
       flex-direction: column;
       background: var(--white);
       border-top: 1px solid var(--border);
-      padding: 16px 20px;
-      gap: 4px;
+      padding: 12px 20px 20px;
+      gap: 2px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.1);
     }
-
-    .mobile-menu.open {
-      display: flex;
-    }
-
+    .mobile-menu.open { display: flex; }
     .mobile-menu a {
       padding: 12px 16px;
-      font-size: 0.95rem;
-      font-weight: 500;
+      font-size: .92rem;
+      font-weight: 600;
       color: var(--text);
       border-radius: var(--radius-sm);
       transition: var(--transition);
     }
-
-    .mobile-menu a:hover {
-      color: var(--primary);
-      background: var(--primary-light);
-    }
-
-    .mobile-menu .mobile-phone {
+    .mobile-menu a:hover { color: var(--primary); background: var(--primary-light); }
+    .mobile-cta {
       margin-top: 8px;
-      text-align: center;
-      padding: 12px;
-      background: var(--primary);
-      color: var(--white);
+      padding: 14px 20px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--white) !important;
       border-radius: var(--radius-sm);
-      font-weight: 600;
+      text-align: center;
+      font-weight: 700 !important;
+      font-size: .95rem !important;
     }
 
-    /* ===== HERO SECTION ===== */
+    /* ===================================================
+       HERO
+    =================================================== */
     #hero {
-      min-height: 100vh;
-      background: linear-gradient(135deg, #0d47a1 0%, #1565c0 30%, #1a73e8 60%, #00897b 100%);
+      min-height: calc(100vh - var(--top-bar-height));
+      background: linear-gradient(135deg, #0a2472 0%, #0d47a1 25%, #1565c0 55%, #006064 100%);
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
-      padding-top: 70px;
+      padding: 80px 0 60px;
     }
-
+    /* Noise texture overlay */
     #hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      opacity: .5;
+      pointer-events: none;
     }
-
-    .hero-shapes {
+    /* Decorative blobs */
+    .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      pointer-events: none;
+    }
+    .hero-blob-1 {
+      width: 600px; height: 600px;
+      background: rgba(0,200,83,.12);
+      top: -200px; right: -150px;
+      animation: float 9s ease-in-out infinite;
+    }
+    .hero-blob-2 {
+      width: 400px; height: 400px;
+      background: rgba(123,47,247,.1);
+      bottom: -120px; left: -100px;
+      animation: float 12s ease-in-out infinite reverse;
+    }
+    .hero-blob-3 {
+      width: 250px; height: 250px;
+      background: rgba(255,107,53,.08);
+      top: 40%; left: 45%;
+      animation: float 7s ease-in-out infinite;
+    }
+    /* Decorative grid */
+    #hero::after {
+      content: '';
       position: absolute;
       inset: 0;
-      overflow: hidden;
+      background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 40px 40px;
       pointer-events: none;
     }
 
-    .hero-shape {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .hero-shape-1 {
-      width: 500px;
-      height: 500px;
-      top: -150px;
-      right: -100px;
-      animation: float 6s ease-in-out infinite;
-    }
-
-    .hero-shape-2 {
-      width: 300px;
-      height: 300px;
-      bottom: -80px;
-      left: -60px;
-      animation: float 8s ease-in-out infinite reverse;
-    }
-
-    .hero-shape-3 {
-      width: 150px;
-      height: 150px;
-      top: 30%;
-      right: 25%;
-      animation: float 5s ease-in-out infinite;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      color: var(--white);
-      max-width: 700px;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 8px 18px;
-      border-radius: 50px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      margin-bottom: 24px;
-      animation: fadeInUp 0.6s ease forwards;
-    }
-
-    .hero-content h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 20px;
-      animation: fadeInUp 0.7s ease 0.1s both;
-    }
-
-    .hero-content h1 span {
-      background: linear-gradient(90deg, #7ee8a2, #80ff72);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-content p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      margin-bottom: 36px;
-      line-height: 1.7;
-      animation: fadeInUp 0.7s ease 0.2s both;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      animation: fadeInUp 0.7s ease 0.3s both;
-    }
-
-    .hero-stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 32px;
-      margin-top: 60px;
-      animation: fadeInUp 0.7s ease 0.4s both;
-    }
-
-    .hero-stat {
-      text-align: center;
-    }
-
-    .hero-stat .number {
-      font-size: 1.8rem;
-      font-weight: 800;
-      display: block;
-    }
-
-    .hero-stat .label {
-      font-size: 0.8rem;
-      opacity: 0.8;
-    }
-
-    /* ===== SERVICES SECTION ===== */
-    #hizmetler {
-      background: var(--light-gray);
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .service-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 32px 24px;
-      text-align: center;
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-      cursor: default;
-      border: 2px solid transparent;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-hover);
-      border-color: var(--primary);
-    }
-
-    .service-icon {
-      font-size: 3rem;
-      margin-bottom: 16px;
-      display: block;
-      line-height: 1;
-    }
-
-    .service-card h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 10px;
-    }
-
-    .service-card p {
-      font-size: 0.88rem;
-      color: var(--gray);
-      line-height: 1.6;
-    }
-
-    .service-card .service-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      margin-top: 16px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--primary);
-      transition: var(--transition);
-    }
-
-    .service-card:hover .service-link {
-      gap: 8px;
-    }
-
-    /* ===== ABOUT SECTION ===== */
-    #hakkimizda {
-      background: var(--white);
-    }
-
-    .about-grid {
+    .hero-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 64px;
       align-items: center;
+      position: relative;
+      z-index: 1;
     }
-
-    .about-content h2 {
-      font-size: 1.9rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 16px;
-      line-height: 1.3;
+    .hero-left { color: var(--white); }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,.22);
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      margin-bottom: 28px;
+      animation: fadeInUp .6s ease forwards;
     }
-
-    .about-content h2 span {
-      color: var(--primary);
+    .hero-badge .dot {
+      width: 8px; height: 8px;
+      background: var(--secondary);
+      border-radius: 50%;
+      animation: pulse-ring 1.8s ease infinite;
     }
-
-    .about-content p {
-      color: var(--gray);
-      margin-bottom: 20px;
-      line-height: 1.75;
+    .hero-left h1 {
+      font-size: clamp(2.1rem, 4.5vw, 3.6rem);
+      font-weight: 900;
+      line-height: 1.12;
+      margin-bottom: 22px;
+      animation: fadeInUp .7s ease .1s both;
+      letter-spacing: -.02em;
     }
-
-    .about-features {
+    .hero-left h1 .highlight {
+      background: linear-gradient(90deg, #4ade80, #86efac);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-left p {
+      font-size: 1.1rem;
+      opacity: .88;
+      line-height: 1.72;
+      margin-bottom: 36px;
+      animation: fadeInUp .7s ease .2s both;
+    }
+    .hero-btns {
       display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 24px;
+      flex-wrap: wrap;
+      gap: 14px;
+      animation: fadeInUp .7s ease .3s both;
     }
-
-    .about-feature {
+    .hero-rating {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-size: 0.95rem;
-      font-weight: 500;
+      gap: 14px;
+      margin-top: 40px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255,255,255,.15);
+      animation: fadeInUp .7s ease .4s both;
     }
+    .hero-avatars {
+      display: flex;
+    }
+    .hero-avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 2.5px solid rgba(255,255,255,.7);
+      background: linear-gradient(135deg, #1a73e8, #00897b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .8rem;
+      font-weight: 700;
+      color: white;
+      margin-left: -10px;
+    }
+    .hero-avatar:first-child { margin-left: 0; }
+    .hero-rating-text { font-size: .85rem; opacity: .88; }
+    .hero-rating-text strong { font-weight: 800; font-size: .95rem; }
+    .hero-stars { color: var(--gold); font-size: .9rem; }
 
-    .about-feature-icon {
-      width: 32px;
-      height: 32px;
-      background: var(--secondary-light);
-      color: var(--secondary);
+    /* ===== Hero Right Visual ===== */
+    .hero-right {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 1s ease .3s both;
+    }
+    .hero-visual-card {
+      background: rgba(255,255,255,.1);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      width: 100%;
+      max-width: 420px;
+      position: relative;
+    }
+    .hero-visual-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .hvc-logo {
+      width: 54px; height: 54px;
+      background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+    .hvc-title { color: white; font-weight: 800; font-size: 1.05rem; }
+    .hvc-subtitle { color: rgba(255,255,255,.7); font-size: .8rem; margin-top: 2px; }
+    .hero-services-mini {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .hsm-item {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: var(--radius-sm);
+      padding: 12px 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .8rem;
+      font-weight: 600;
+      color: rgba(255,255,255,.9);
+      transition: var(--transition);
+    }
+    .hsm-item:hover {
+      background: rgba(255,255,255,.18);
+    }
+    .hsm-icon {
+      width: 30px; height: 30px;
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: .9rem;
       flex-shrink: 0;
-      font-size: 1rem;
+    }
+    .hvc-cta {
+      background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .hvc-cta-text { color: white; font-size: .82rem; }
+    .hvc-cta-text strong { display: block; font-size: 1.1rem; letter-spacing: .02em; }
+    .hvc-cta-btn {
+      background: white;
+      color: var(--secondary-dark);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: .82rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    /* Floating badges */
+    .hero-float-badge {
+      position: absolute;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 12px 18px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--dark);
+      animation: float2 5s ease-in-out infinite;
+    }
+    .hero-float-badge .badge-icon {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .hero-float-badge .badge-num { font-size: 1.15rem; font-weight: 900; color: var(--primary); line-height: 1; }
+    .hero-float-badge .badge-label { font-size: .7rem; color: var(--gray); font-weight: 500; }
+    .hfb-1 { top: -20px; right: -20px; animation-delay: 0s; }
+    .hfb-2 { bottom: -16px; left: -24px; animation-delay: 1.5s; }
+
+    /* ===================================================
+       STATS STRIP
+    =================================================== */
+    #stats-strip {
+      background: var(--white);
+      padding: 0;
+      position: relative;
+      z-index: 2;
+    }
+    .stats-strip-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      margin-top: calc(-1 * var(--stats-overlap));
+      position: relative;
+    }
+    .stat-block {
+      background: var(--white);
+      padding: 36px 28px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+      transition: var(--transition);
+    }
+    .stat-block:last-child { border-right: none; }
+    .stat-block:hover { background: var(--primary-light); }
+    .stat-block-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .stat-block-num {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--primary);
+      display: block;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-block-label {
+      font-size: .82rem;
+      color: var(--gray);
+      font-weight: 500;
     }
 
-    .about-stats {
+    /* ===================================================
+       SERVICES SECTION
+    =================================================== */
+    #hizmetler {
+      padding: 100px 0;
+      background: var(--off-white);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px 22px 26px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1.5px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--card-color, var(--primary));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .35s ease;
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-md);
+      border-color: transparent;
+    }
+    .service-icon-wrap {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 18px;
+      background: var(--card-color-light, var(--primary-light));
+      transition: var(--transition);
+    }
+    .service-card:hover .service-icon-wrap {
+      background: var(--card-color, var(--primary));
+      transform: scale(1.08) rotate(-4deg);
+    }
+    .service-card h3 {
+      font-size: .95rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: .82rem;
+      color: var(--gray);
+      line-height: 1.65;
+    }
+    .service-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 16px;
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--card-color, var(--primary));
+      transition: gap .2s;
+    }
+    .service-card:hover .service-card-link { gap: 8px; }
+
+    /* ===================================================
+       CTA STRIP
+    =================================================== */
+    #cta-strip {
+      padding: 72px 0;
+      background: linear-gradient(135deg, #0a2472 0%, #1565c0 40%, #00695c 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    #cta-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+    .cta-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(70px);
+      pointer-events: none;
+    }
+    .cta-blob-1 { width:400px; height:400px; background:rgba(0,200,83,.15); top:-100px; right:-50px; }
+    .cta-blob-2 { width:300px; height:300px; background:rgba(123,47,247,.12); bottom:-80px; left:-40px; }
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .cta-text { color: var(--white); }
+    .cta-text .overline {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      opacity: .75;
+      margin-bottom: 12px;
+    }
+    .cta-text h2 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.18;
+      margin-bottom: 10px;
+    }
+    .cta-text p { opacity: .82; font-size: 1rem; }
+    .cta-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    /* ===================================================
+       ABOUT / HAKKIMIZDA
+    =================================================== */
+    #hakkimizda {
+      padding: 100px 0;
+      background: var(--white);
+    }
+    .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 72px;
+      align-items: center;
     }
+    .about-content .section-label { background: var(--secondary-light); color: var(--secondary-dark); }
+    .about-content h2 {
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 18px;
+      line-height: 1.25;
+    }
+    .about-content h2 span { color: var(--primary); }
+    .about-content > p {
+      color: var(--gray);
+      margin-bottom: 16px;
+      line-height: 1.78;
+      font-size: .97rem;
+    }
+    .about-features {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 28px 0;
+    }
+    .about-feature {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .about-feat-icon {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .about-feature span { font-size: .93rem; font-weight: 600; color: var(--text); }
+    .about-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; }
 
-    .stat-card {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: var(--white);
+    /* Stats grid (right side) */
+    .about-stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .about-stat-card {
       border-radius: var(--radius);
       padding: 32px 24px;
       text-align: center;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
       transition: var(--transition);
     }
-
-    .stat-card:nth-child(2) {
-      background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+    .about-stat-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: var(--shadow-md); }
+    .about-stat-card::before {
+      content: '';
+      position: absolute;
+      bottom: -20px; right: -20px;
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.1);
     }
-
-    .stat-card:nth-child(3) {
-      background: linear-gradient(135deg, #7b2ff7, #5c1db3);
-    }
-
-    .stat-card:nth-child(4) {
-      background: linear-gradient(135deg, #f39c12, #d68910);
-    }
-
-    .stat-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .stat-number {
-      font-size: 2.4rem;
-      font-weight: 800;
-      display: block;
+    .asc-1 { background: linear-gradient(135deg, #1a73e8 0%, #1256c0 100%); }
+    .asc-2 { background: linear-gradient(135deg, #00c853 0%, #00a040 100%); }
+    .asc-3 { background: linear-gradient(135deg, #7b2ff7 0%, #5c1db3 100%); }
+    .asc-4 { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+    .asc-icon { font-size: 2rem; margin-bottom: 8px; display: block; }
+    .asc-num {
+      font-size: 2.6rem;
+      font-weight: 900;
       line-height: 1;
-    }
-
-    .stat-label {
-      font-size: 0.85rem;
-      opacity: 0.9;
-      margin-top: 8px;
       display: block;
+      margin-bottom: 6px;
     }
+    .asc-label { font-size: .8rem; opacity: .88; font-weight: 500; }
 
-    /* ===== WHY US SECTION ===== */
+    /* ===================================================
+       WHY US / NEDEN BİZ
+    =================================================== */
     #neden-biz {
-      background: var(--light-gray);
+      padding: 100px 0;
+      background: var(--off-white);
     }
-
+    #neden-biz .section-label { background: var(--purple-light); color: var(--purple); }
     .why-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
-
     .why-card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 28px 24px;
-      display: flex;
-      gap: 18px;
-      align-items: flex-start;
-      box-shadow: var(--shadow);
+      padding: 32px 26px;
+      box-shadow: var(--shadow-sm);
+      border: 1.5px solid var(--border);
       transition: var(--transition);
-      border-left: 4px solid transparent;
+      position: relative;
+      overflow: hidden;
     }
-
+    .why-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--why-color, var(--primary));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .35s ease;
+    }
+    .why-card:hover::after { transform: scaleX(1); }
     .why-card:hover {
-      border-left-color: var(--primary);
-      transform: translateX(4px);
-      box-shadow: var(--shadow-hover);
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+      border-color: transparent;
     }
-
     .why-icon {
-      width: 52px;
-      height: 52px;
-      background: var(--primary-light);
-      color: var(--primary);
+      width: 60px; height: 60px;
       border-radius: var(--radius-sm);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
-      flex-shrink: 0;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      background: var(--why-color-light, var(--primary-light));
       transition: var(--transition);
     }
-
     .why-card:hover .why-icon {
-      background: var(--primary);
-      color: var(--white);
+      background: var(--why-color, var(--primary));
+      transform: scale(1.1) rotate(-5deg);
     }
-
-    .why-text h3 {
-      font-size: 1rem;
-      font-weight: 700;
+    .why-card h3 {
+      font-size: 1.02rem;
+      font-weight: 800;
       color: var(--dark);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
+    .why-card p { font-size: .86rem; color: var(--gray); line-height: 1.68; }
 
-    .why-text p {
-      font-size: 0.88rem;
-      color: var(--gray);
-      line-height: 1.6;
-    }
-
-    /* ===== SERVICE AREAS SECTION ===== */
+    /* ===================================================
+       SERVICE AREAS
+    =================================================== */
     #hizmet-bolgeleri {
+      padding: 100px 0;
       background: var(--white);
     }
-
-    .areas-intro {
-      text-align: center;
-      max-width: 650px;
-      margin: 0 auto 40px;
-      color: var(--gray);
+    .areas-map-banner {
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+      border: 1px solid rgba(26,115,232,.15);
+      border-radius: var(--radius-lg);
+      padding: 36px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
     }
-
+    .areas-banner-text h3 { font-size: 1.25rem; font-weight: 800; color: var(--dark); margin-bottom: 6px; }
+    .areas-banner-text p { font-size: .9rem; color: var(--gray); }
     .areas-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
       justify-content: center;
     }
-
     .area-tag {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 10px 18px;
-      background: var(--primary-light);
-      color: var(--primary);
+      padding: 9px 16px;
+      background: var(--off-white);
+      color: var(--text);
       border-radius: 50px;
-      font-size: 0.88rem;
+      font-size: .82rem;
       font-weight: 600;
+      border: 1.5px solid var(--border);
       transition: var(--transition);
       cursor: default;
     }
-
     .area-tag:hover {
       background: var(--primary);
       color: var(--white);
-      transform: translateY(-2px);
+      border-color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 16px rgba(26,115,232,.28);
     }
 
-    /* ===== REVIEWS SECTION ===== */
+    /* ===================================================
+       REVIEWS
+    =================================================== */
     #yorumlar {
-      background: var(--light-gray);
+      padding: 100px 0;
+      background: var(--off-white);
     }
-
+    #yorumlar .section-label { background: var(--gold-light); color: #b45309; }
     .reviews-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
     }
-
     .review-card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 28px 24px;
-      box-shadow: var(--shadow);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-sm);
+      border: 1.5px solid var(--border);
       transition: var(--transition);
       position: relative;
+      overflow: hidden;
     }
-
-    .review-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover);
-    }
-
     .review-card::before {
-      content: '"';
+      content: '';
       position: absolute;
-      top: 16px;
-      right: 24px;
-      font-size: 5rem;
-      color: var(--primary-light);
-      font-family: Georgia, serif;
-      line-height: 1;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: var(--review-color, var(--primary));
     }
-
+    .review-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: transparent; }
+    .review-quote {
+      font-size: 4rem;
+      color: var(--review-color, var(--primary));
+      opacity: .15;
+      font-family: Georgia, serif;
+      line-height: .8;
+      margin-bottom: 12px;
+      display: block;
+    }
     .review-stars {
       display: flex;
-      gap: 4px;
+      gap: 3px;
       margin-bottom: 14px;
     }
-
-    .review-stars span {
-      color: #f39c12;
-      font-size: 1.1rem;
-    }
-
+    .review-stars span { font-size: 1rem; }
     .review-text {
-      font-size: 0.92rem;
+      font-size: .9rem;
       color: var(--text);
-      line-height: 1.7;
-      margin-bottom: 20px;
+      line-height: 1.75;
+      margin-bottom: 22px;
       font-style: italic;
     }
-
-    .review-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
+    .review-divider { width: 40px; height: 2px; background: var(--border); margin-bottom: 18px; border-radius: 2px; }
+    .review-author { display: flex; align-items: center; gap: 14px; }
     .review-avatar {
-      width: 44px;
-      height: 44px;
+      width: 46px; height: 46px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
-      font-weight: 700;
+      font-size: 1.1rem;
+      font-weight: 800;
       color: var(--white);
       flex-shrink: 0;
+      border: 2px solid rgba(255,255,255,.6);
     }
+    .review-info strong { display: block; font-size: .9rem; font-weight: 800; color: var(--dark); }
+    .review-info span { font-size: .78rem; color: var(--gray); }
 
-    .review-info strong {
-      display: block;
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: var(--dark);
-    }
-
-    .review-info span {
-      font-size: 0.8rem;
-      color: var(--gray);
-    }
-
-    /* ===== CONTACT SECTION ===== */
+    /* ===================================================
+       CONTACT
+    =================================================== */
     #iletisim {
+      padding: 0;
       background: var(--white);
     }
-
-    .contact-grid {
+    .contact-wrapper {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 48px;
-      margin-bottom: 48px;
+      grid-template-columns: 1fr 1.3fr;
+      min-height: 700px;
     }
-
-    .contact-info h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 24px;
+    .contact-info-panel {
+      background: linear-gradient(160deg, #0a2472 0%, #1565c0 50%, #006064 100%);
+      padding: 72px 52px;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
     }
-
-    .contact-items {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
+    .contact-info-panel::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 40px 40px;
     }
-
+    .contact-info-blob {
+      position: absolute;
+      width: 360px; height: 360px;
+      background: rgba(0,200,83,.1);
+      border-radius: 50%;
+      filter: blur(60px);
+      bottom: -100px; right: -80px;
+    }
+    .cip-content { position: relative; z-index: 1; }
+    .contact-info-panel .section-label {
+      background: rgba(255,255,255,.15);
+      color: rgba(255,255,255,.9);
+    }
+    .contact-info-panel h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .contact-info-panel > .cip-content > p {
+      opacity: .82;
+      line-height: 1.72;
+      font-size: .95rem;
+      margin-bottom: 40px;
+    }
+    .contact-items { display: flex; flex-direction: column; gap: 20px; }
     .contact-item {
       display: flex;
       gap: 16px;
       align-items: flex-start;
     }
-
-    .contact-item-icon {
-      width: 46px;
-      height: 46px;
-      background: var(--primary-light);
-      color: var(--primary);
-      border-radius: var(--radius-sm);
+    .ci-icon {
+      width: 48px; height: 48px;
+      background: rgba(255,255,255,.14);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.2rem;
       flex-shrink: 0;
     }
-
-    .contact-item-text strong {
-      display: block;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--gray);
-      margin-bottom: 4px;
+    .ci-label {
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      opacity: .65;
+      margin-bottom: 3px;
     }
-
-    .contact-item-text a,
-    .contact-item-text span {
-      font-size: 0.95rem;
-      color: var(--dark);
-      font-weight: 500;
-    }
-
-    .contact-item-text a:hover {
-      color: var(--primary);
-    }
-
-    .social-links {
+    .ci-value { font-size: .95rem; font-weight: 600; }
+    .ci-value a { color: inherit; transition: opacity .2s; }
+    .ci-value a:hover { opacity: .8; }
+    .contact-social {
       display: flex;
-      gap: 12px;
-      margin-top: 28px;
+      gap: 10px;
+      margin-top: 36px;
     }
-
-    .social-link {
-      width: 42px;
-      height: 42px;
+    .cs-link {
+      width: 42px; height: 42px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.1rem;
       transition: var(--transition);
-      background: var(--light-gray);
-      color: var(--text);
     }
+    .cs-link:hover { background: rgba(255,255,255,.25); transform: translateY(-3px); }
 
-    .social-link:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow);
+    /* Contact form panel */
+    .contact-form-panel {
+      padding: 72px 52px;
+      background: var(--white);
     }
-
-    .social-link.facebook:hover { background: #1877f2; color: var(--white); }
-    .social-link.instagram:hover { background: #e4405f; color: var(--white); }
-    .social-link.twitter:hover { background: #1da1f2; color: var(--white); }
-    .social-link.youtube:hover { background: #ff0000; color: var(--white); }
-
-    .contact-form-wrapper h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
+    .contact-form-panel h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
       color: var(--dark);
-      margin-bottom: 24px;
+      margin-bottom: 6px;
     }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    .contact-form-panel > p {
+      color: var(--gray);
+      font-size: .9rem;
+      margin-bottom: 32px;
     }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
+    .contact-form { display: flex; flex-direction: column; gap: 18px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
     .form-group label {
-      font-size: 0.85rem;
-      font-weight: 600;
+      font-size: .8rem;
+      font-weight: 700;
       color: var(--text);
+      letter-spacing: .02em;
     }
-
     .form-group input,
     .form-group textarea,
     .form-group select {
-      padding: 12px 16px;
+      padding: 13px 16px;
       border: 2px solid var(--border);
       border-radius: var(--radius-sm);
       font-family: var(--font);
-      font-size: 0.92rem;
+      font-size: .9rem;
       color: var(--text);
       transition: var(--transition);
       background: var(--white);
       outline: none;
     }
-
     .form-group input:focus,
     .form-group textarea:focus,
     .form-group select:focus {
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+      box-shadow: 0 0 0 4px rgba(26,115,232,.1);
     }
-
     .form-group input[aria-invalid="true"],
     .form-group textarea[aria-invalid="true"] {
-      border-color: #e74c3c;
-      box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+      border-color: #ef4444;
+      box-shadow: 0 0 0 4px rgba(239,68,68,.1);
     }
-
     .field-error {
-      font-size: 0.8rem;
-      color: #e74c3c;
-      margin-top: 4px;
+      font-size: .78rem;
+      color: #ef4444;
+      font-weight: 600;
       display: none;
+      margin-top: 2px;
     }
-
-    .field-error.visible {
-      display: block;
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
+    .field-error.visible { display: block; }
+    .form-group textarea { resize: vertical; min-height: 120px; }
     .form-submit {
-      padding: 14px 32px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      width: 100%;
+      padding: 15px 32px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: var(--white);
       border: none;
       border-radius: 50px;
       font-family: var(--font);
-      font-size: 0.95rem;
-      font-weight: 600;
+      font-size: 1rem;
+      font-weight: 700;
       cursor: pointer;
       transition: var(--transition);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 10px;
+      box-shadow: 0 4px 20px rgba(26,115,232,.35);
     }
-
-    .form-submit:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(26, 115, 232, 0.4);
+    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(26,115,232,.5); }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 40px 24px;
     }
+    .form-success.show { display: block; }
+    .form-success .success-icon {
+      width: 72px; height: 72px;
+      background: var(--secondary-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 18px;
+    }
+    .form-success h4 { font-size: 1.3rem; font-weight: 800; color: var(--dark); margin-bottom: 10px; }
+    .form-success p { color: var(--gray); font-size: .9rem; }
 
+    /* Map */
+    .map-section { padding: 60px 0; background: var(--off-white); }
     .map-wrapper {
-      border-radius: var(--radius);
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      box-shadow: var(--shadow);
-      height: 360px;
+      box-shadow: var(--shadow-md);
+      height: 380px;
     }
+    .map-wrapper iframe { width: 100%; height: 100%; border: none; display: block; }
 
-    .map-wrapper iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* ===== FOOTER ===== */
+    /* ===================================================
+       FOOTER
+    =================================================== */
     #footer {
-      background: #0d1b2a;
-      color: rgba(255, 255, 255, 0.8);
-      padding: 60px 0 0;
+      background: linear-gradient(160deg, #070d1f 0%, #0d1b2a 60%, #061318 100%);
+      color: rgba(255,255,255,.7);
+      padding-top: 80px;
+      position: relative;
     }
-
+    #footer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary), var(--purple), var(--accent));
+    }
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1.5fr;
-      gap: 40px;
-      margin-bottom: 48px;
+      gap: 48px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
     }
-
-    .footer-brand .footer-logo {
+    .footer-logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       font-size: 1.3rem;
-      font-weight: 800;
+      font-weight: 900;
       color: var(--white);
       margin-bottom: 16px;
     }
-
     .footer-logo-icon {
-      width: 38px;
-      height: 38px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--primary), #00897b);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .footer-brand p { font-size: .86rem; line-height: 1.75; margin-bottom: 24px; }
+    .footer-social { display: flex; gap: 10px; }
+    .footer-social-link {
+      width: 40px; height: 40px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.1);
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.1rem;
-    }
-
-    .footer-brand p {
-      font-size: 0.88rem;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 10px;
-    }
-
-    .footer-social-link {
-      width: 38px;
-      height: 38px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-size: 1rem;
       transition: var(--transition);
     }
-
-    .footer-social-link:hover {
-      background: var(--primary);
-      transform: translateY(-2px);
-    }
-
+    .footer-social-link:hover { background: var(--primary); border-color: var(--primary); transform: translateY(-3px); }
     .footer-col h4 {
       color: var(--white);
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      position: relative;
-      padding-bottom: 10px;
+      font-size: .98rem;
+      font-weight: 800;
+      margin-bottom: 22px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid rgba(255,255,255,.08);
     }
-
-    .footer-col h4::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 32px;
-      height: 3px;
-      background: var(--primary);
-      border-radius: 2px;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
+    .footer-links { display: flex; flex-direction: column; gap: 11px; }
     .footer-links a {
-      font-size: 0.88rem;
+      font-size: .85rem;
       transition: var(--transition);
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 7px;
     }
-
-    .footer-links a:hover {
-      color: var(--white);
-      padding-left: 4px;
-    }
-
     .footer-links a::before {
-      content: '›';
+      content: '→';
       color: var(--primary);
-      font-size: 1rem;
+      font-size: .75rem;
+      transition: transform .2s;
     }
-
-    .footer-contact-items {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
+    .footer-links a:hover { color: var(--white); }
+    .footer-links a:hover::before { transform: translateX(3px); }
+    .footer-contact-list { display: flex; flex-direction: column; gap: 14px; }
     .footer-contact-item {
       display: flex;
       gap: 10px;
       align-items: flex-start;
-      font-size: 0.88rem;
+      font-size: .84rem;
     }
-
-    .footer-contact-item span:first-child {
-      font-size: 1rem;
-      margin-top: 1px;
-      flex-shrink: 0;
-    }
-
-    .footer-contact-item a {
-      transition: var(--transition);
-    }
-
-    .footer-contact-item a:hover {
-      color: var(--white);
-    }
-
+    .footer-contact-item .fci-icon { font-size: .95rem; flex-shrink: 0; margin-top: 1px; }
+    .footer-contact-item a { transition: opacity .2s; }
+    .footer-contact-item a:hover { opacity: 1; color: var(--white); }
     .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 20px 0;
+      padding: 22px 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 12px;
     }
+    .footer-bottom p { font-size: .82rem; }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { font-size: .8rem; transition: var(--transition); }
+    .footer-bottom-links a:hover { color: var(--white); }
 
-    .footer-bottom p {
-      font-size: 0.85rem;
-    }
-
-    .footer-bottom-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .footer-bottom-links a {
-      font-size: 0.82rem;
-      transition: var(--transition);
-    }
-
-    .footer-bottom-links a:hover {
-      color: var(--white);
-    }
-
-    /* ===== WHATSAPP BUTTON ===== */
+    /* ===================================================
+       WHATSAPP BUTTON
+    =================================================== */
     #whatsapp-btn {
       position: fixed;
-      bottom: 28px;
-      right: 28px;
+      bottom: 30px; right: 30px;
       z-index: 999;
-      width: 60px;
-      height: 60px;
-      background: #25d366;
+      width: 62px; height: 62px;
+      background: linear-gradient(135deg, #25d366, #1ebe59);
       color: var(--white);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
-      transition: var(--transition);
+      font-size: 1.9rem;
+      box-shadow: 0 6px 28px rgba(37,211,102,.55);
       text-decoration: none;
-      animation: pulse 2.5s ease-in-out infinite;
+      transition: var(--transition);
     }
-
-    #whatsapp-btn:hover {
-      background: #128c7e;
-      transform: scale(1.1);
-      box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
-      animation: none;
-    }
-
-    #whatsapp-btn::before {
+    #whatsapp-btn::before,
+    #whatsapp-btn::after {
       content: '';
       position: absolute;
-      inset: -8px;
+      inset: -4px;
       border-radius: 50%;
-      border: 2px solid rgba(37, 211, 102, 0.3);
-      animation: pulse 2.5s ease-in-out infinite;
+      border: 2px solid rgba(37,211,102,.4);
+      animation: pulse-ring 2s ease infinite;
+    }
+    #whatsapp-btn::after { animation-delay: .6s; }
+    #whatsapp-btn:hover {
+      background: linear-gradient(135deg, #20c45e, #128c7e);
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 10px 36px rgba(37,211,102,.65);
     }
 
-    /* ===== SCROLL TO TOP ===== */
+    /* ===================================================
+       SCROLL TO TOP
+    =================================================== */
     #scroll-top {
       position: fixed;
-      bottom: 28px;
-      right: 100px;
+      bottom: 30px; right: 104px;
       z-index: 999;
-      width: 46px;
-      height: 46px;
-      background: var(--primary);
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: var(--white);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
-      box-shadow: var(--shadow);
+      font-size: 1.25rem;
+      box-shadow: 0 4px 20px rgba(26,115,232,.4);
       cursor: pointer;
       border: none;
       transition: var(--transition);
       opacity: 0;
       pointer-events: none;
-      transform: translateY(10px);
+      transform: translateY(12px);
+    }
+    #scroll-top.visible { opacity: 1; pointer-events: all; transform: translateY(0); }
+    #scroll-top:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(26,115,232,.55); }
+
+    /* ===================================================
+       RESPONSIVE
+    =================================================== */
+    @media (max-width: 1100px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
-    #scroll-top.visible {
-      opacity: 1;
-      pointer-events: all;
-      transform: translateY(0);
-    }
-
-    #scroll-top:hover {
-      background: var(--primary-dark);
-      transform: translateY(-3px);
-    }
-
-    /* ===== FORM SUCCESS MESSAGE ===== */
-    .form-success {
-      display: none;
-      text-align: center;
-      padding: 24px;
-      background: var(--secondary-light);
-      border-radius: var(--radius);
-      color: var(--secondary-dark);
-    }
-
-    .form-success.show {
-      display: block;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 1024px) {
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .about-grid {
-        gap: 40px;
-      }
+    @media (max-width: 900px) {
+      .hero-layout { grid-template-columns: 1fr; gap: 48px; }
+      .hero-right { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .contact-wrapper { grid-template-columns: 1fr; }
+      .contact-info-panel { padding: 60px 32px; }
+      .contact-form-panel { padding: 60px 32px; }
+      .stats-strip-inner { grid-template-columns: repeat(2, 1fr); }
+      .stats-strip-inner .stat-block:nth-child(2) { border-right: none; }
+      .reviews-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 768px) {
-      section {
-        padding: 60px 0;
-      }
-
-      .section-title h2 {
-        font-size: 1.6rem;
-      }
-
-      .nav-menu,
-      .nav-phone {
-        display: none;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-stats {
-        order: -1;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero-stats {
-        gap: 20px;
-      }
-
-      #scroll-top {
-        right: 90px;
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-      }
-
-      #whatsapp-btn {
-        width: 52px;
-        height: 52px;
-        font-size: 1.5rem;
-        bottom: 20px;
-        right: 20px;
-      }
-
-      #scroll-top {
-        right: 80px;
-        bottom: 20px;
-      }
+      .top-bar-inner { gap: 14px; font-size: .76rem; }
+      .top-bar-divider { display: none; }
+      .nav-menu, .nav-phone-btn { display: none; }
+      .hamburger { display: flex; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns .btn { width: 100%; justify-content: center; }
+      .why-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .cta-inner { flex-direction: column; text-align: center; }
+      .cta-actions { justify-content: center; width: 100%; }
+      .form-row { grid-template-columns: 1fr; }
+      #scroll-top { right: 90px; bottom: 22px; width: 42px; height: 42px; font-size: 1.1rem; }
+      #whatsapp-btn { bottom: 22px; right: 22px; width: 54px; height: 54px; font-size: 1.6rem; }
+      .stats-strip-inner { margin-top: -20px; }
+      .areas-map-banner { flex-direction: column; text-align: center; }
     }
 
-    @media (max-width: 480px) {
-      .hero-buttons {
-        flex-direction: column;
-      }
-
-      .hero-buttons .btn {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 520px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .stats-strip-inner { grid-template-columns: 1fr 1fr; }
+      .about-stats-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
 
+  <!-- ===== ANNOUNCEMENT BAR ===== -->
+  <div id="top-bar">
+    <div class="container">
+      <div class="top-bar-inner">
+        <span class="top-bar-item">📞 <a href="tel:+905352201014">0535 220 10 14</a></span>
+        <span class="top-bar-divider">|</span>
+        <span class="top-bar-item">💬 <a href="https://wa.me/905352201014" target="_blank" rel="noopener noreferrer">WhatsApp ile Ulaş</a></span>
+        <span class="top-bar-divider">|</span>
+        <span class="top-bar-item">📍 Beykoz, İstanbul &nbsp;— &nbsp;7/24 Hizmet Veriyoruz</span>
+        <span class="top-bar-divider">|</span>
+        <span class="top-bar-item">✅ Ücretsiz Keşif &amp; Fiyat Teklifi</span>
+      </div>
+    </div>
+  </div>
+
   <!-- ===== NAVBAR ===== -->
   <nav id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">
-        <div class="nav-logo-icon">✨</div>
-        Efe Temizlik
-      </a>
-      <div class="nav-menu">
-        <a href="#hero">Ana Sayfa</a>
-        <a href="#hizmetler">Hizmetlerimiz</a>
-        <a href="#hakkimizda">Hakkımızda</a>
-        <a href="#neden-biz">Neden Biz?</a>
-        <a href="#hizmet-bolgeleri">Hizmet Bölgeleri</a>
-        <a href="#iletisim">İletişim</a>
+    <div class="container">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo">
+          <div class="nav-logo-icon">✨</div>
+          <div class="nav-logo-text">
+            Efe Temizlik
+            <small>Profesyonel Temizlik Hizmetleri</small>
+          </div>
+        </a>
+        <div class="nav-menu">
+          <a href="#hero">Ana Sayfa</a>
+          <a href="#hizmetler">Hizmetlerimiz</a>
+          <a href="#hakkimizda">Hakkımızda</a>
+          <a href="#neden-biz">Neden Biz?</a>
+          <a href="#hizmet-bolgeleri">Hizmet Bölgeleri</a>
+          <a href="#iletisim">İletişim</a>
+        </div>
+        <div class="nav-actions">
+          <a href="tel:+905352201014" class="nav-phone-btn">
+            📞 0535 220 10 14
+          </a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menü" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <a href="tel:+905352201014" class="nav-phone">
-        📞 0535 220 10 14
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Menü" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
     <div class="mobile-menu" id="mobile-menu">
       <a href="#hero" class="mobile-nav-link">🏠 Ana Sayfa</a>
@@ -1468,224 +1567,334 @@
       <a href="#hakkimizda" class="mobile-nav-link">ℹ️ Hakkımızda</a>
       <a href="#neden-biz" class="mobile-nav-link">⭐ Neden Biz?</a>
       <a href="#hizmet-bolgeleri" class="mobile-nav-link">📍 Hizmet Bölgeleri</a>
-      <a href="#iletisim" class="mobile-nav-link">📞 İletişim</a>
-      <a href="tel:+905352201014" class="mobile-phone">📞 0535 220 10 14 - Hemen Ara</a>
+      <a href="#iletisim" class="mobile-nav-link">✉️ İletişim</a>
+      <a href="tel:+905352201014" class="mobile-cta">📞 0535 220 10 14 — Hemen Ara</a>
     </div>
   </nav>
 
-  <!-- ===== HERO SECTION ===== -->
+  <!-- ===== HERO ===== -->
   <section id="hero">
-    <div class="hero-shapes" aria-hidden="true">
-      <div class="hero-shape hero-shape-1"></div>
-      <div class="hero-shape hero-shape-2"></div>
-      <div class="hero-shape hero-shape-3"></div>
-    </div>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          📍 Beykoz, İstanbul &nbsp;|&nbsp; 7/24 Hizmet
+      <div class="hero-layout">
+        <!-- LEFT -->
+        <div class="hero-left">
+          <div class="hero-badge">
+            <div class="dot"></div>
+            Beykoz &amp; İstanbul Anadolu Yakası
+          </div>
+          <h1>Beykoz'un En <span class="highlight">Güvenilir</span><br/>Temizlik Hizmeti</h1>
+          <p>Eviniz, ofisiniz ve işyeriniz için profesyonel temizlik çözümleri. Uzman ekibimiz ve çevre dostu ürünlerimizle Beykoz'un her noktasına hizmet veriyoruz!</p>
+          <div class="hero-btns">
+            <a href="tel:+905352201014" class="btn btn-primary btn-lg">📞 Hemen Ara</a>
+            <a href="https://wa.me/905352201014" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-lg">💬 WhatsApp</a>
+            <a href="#hizmetler" class="btn btn-outline-white btn-lg">🔍 Hizmetlerimiz</a>
+          </div>
+          <div class="hero-rating">
+            <div class="hero-avatars">
+              <div class="hero-avatar" style="background:linear-gradient(135deg,#1a73e8,#00897b);">A</div>
+              <div class="hero-avatar" style="background:linear-gradient(135deg,#7b2ff7,#f64f59);">M</div>
+              <div class="hero-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444);">F</div>
+              <div class="hero-avatar" style="background:linear-gradient(135deg,#00c853,#1a73e8);">H</div>
+            </div>
+            <div class="hero-rating-text">
+              <div class="hero-stars">★★★★★</div>
+              <div><strong>500+</strong> memnun müşteri — Beykoz'un en iyi temizlik firması</div>
+            </div>
+          </div>
         </div>
-        <h1>Beykoz'un En <span>Güvenilir</span><br />Temizlik Hizmeti</h1>
-        <p>Eviniz, ofisiniz ve işyeriniz için profesyonel temizlik çözümleri. Beykoz'un her noktasına hizmet veriyoruz!</p>
-        <div class="hero-buttons">
-          <a href="tel:+905352201014" class="btn btn-primary">📞 Hemen Ara</a>
-          <a href="https://wa.me/905352201014" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">💬 WhatsApp ile Ulaş</a>
-          <a href="#hizmetler" class="btn btn-outline">🔍 Hizmetlerimiz</a>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="number">500+</span>
-            <span class="label">Mutlu Müşteri</span>
+
+        <!-- RIGHT VISUAL -->
+        <div class="hero-right">
+          <div class="hero-visual-card">
+            <div class="hero-visual-card-header">
+              <div class="hvc-logo">✨</div>
+              <div>
+                <div class="hvc-title">Efe Temizlik</div>
+                <div class="hvc-subtitle">Profesyonel Temizlik Hizmetleri</div>
+              </div>
+            </div>
+            <div class="hero-services-mini">
+              <div class="hsm-item">
+                <div class="hsm-icon" style="background:rgba(26,115,232,.2);">🏠</div>
+                Ev Temizliği
+              </div>
+              <div class="hsm-item">
+                <div class="hsm-icon" style="background:rgba(0,200,83,.2);">🏢</div>
+                Ofis Temizliği
+              </div>
+              <div class="hsm-item">
+                <div class="hsm-icon" style="background:rgba(245,158,11,.2);">🔨</div>
+                İnşaat Sonrası
+              </div>
+              <div class="hsm-item">
+                <div class="hsm-icon" style="background:rgba(123,47,247,.2);">🧹</div>
+                Derin Temizlik
+              </div>
+              <div class="hsm-item">
+                <div class="hsm-icon" style="background:rgba(255,107,53,.2);">🪟</div>
+                Cam Temizliği
+              </div>
+              <div class="hsm-item">
+                <div class="hsm-icon" style="background:rgba(0,137,123,.2);">🛋️</div>
+                Koltuk Yıkama
+              </div>
+            </div>
+            <div class="hvc-cta">
+              <div class="hvc-cta-text">
+                Hemen Fiyat Al
+                <strong>0535 220 10 14</strong>
+              </div>
+              <a href="tel:+905352201014" class="hvc-cta-btn">Ara →</a>
+            </div>
           </div>
-          <div class="hero-stat">
-            <span class="number">10+</span>
-            <span class="label">Yıl Deneyim</span>
+
+          <!-- Floating badges -->
+          <div class="hero-float-badge hfb-1">
+            <div class="badge-icon" style="background:var(--gold-light);">⭐</div>
+            <div>
+              <div class="badge-num">4.9</div>
+              <div class="badge-label">Müşteri Puanı</div>
+            </div>
           </div>
-          <div class="hero-stat">
-            <span class="number">1000+</span>
-            <span class="label">Tamamlanan İş</span>
-          </div>
-          <div class="hero-stat">
-            <span class="number">7/24</span>
-            <span class="label">Hizmet</span>
+          <div class="hero-float-badge hfb-2">
+            <div class="badge-icon" style="background:var(--secondary-light);">✅</div>
+            <div>
+              <div class="badge-num">1000+</div>
+              <div class="badge-label">Tamamlanan İş</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SERVICES SECTION ===== -->
+  <!-- ===== STATS STRIP ===== -->
+  <section id="stats-strip">
+    <div class="container">
+      <div class="stats-strip-inner scroll-animate">
+        <div class="stat-block">
+          <span class="stat-block-icon">😊</span>
+          <span class="stat-block-num" data-target="500">0</span>
+          <span class="stat-block-label">+ Mutlu Müşteri</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-block-icon">🏆</span>
+          <span class="stat-block-num" data-target="10">0</span>
+          <span class="stat-block-label">+ Yıl Deneyim</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-block-icon">✅</span>
+          <span class="stat-block-num" data-target="1000">0</span>
+          <span class="stat-block-label">+ Tamamlanan İş</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-block-icon">🌟</span>
+          <span class="stat-block-num">7/24</span>
+          <span class="stat-block-label">Hizmet</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
   <section id="hizmetler">
     <div class="container">
-      <div class="section-title scroll-animate">
-        <h2>Hizmetlerimiz</h2>
-        <p>Beykoz'da kapsamlı profesyonel temizlik hizmetleri sunuyoruz. Her ihtiyacınıza uygun çözümler.</p>
+      <div class="section-header scroll-animate">
+        <div class="section-label">🧹 Hizmetlerimiz</div>
+        <h2>Kapsamlı <span>Temizlik Çözümleri</span></h2>
+        <p>Beykoz'da ev, ofis ve işyerleriniz için her ihtiyaca özel profesyonel temizlik hizmetleri sunuyoruz.</p>
       </div>
       <div class="services-grid">
-        <div class="service-card scroll-animate">
-          <span class="service-icon">🏠</span>
+        <div class="service-card scroll-animate delay-1" style="--card-color:#1a73e8;--card-color-light:#e8f0fe;">
+          <div class="service-icon-wrap">🏠</div>
           <h3>Ev Temizliği</h3>
-          <p>Evinizin her köşesini uzman ekibimizle pırıl pırıl hale getiriyoruz. Düzenli ve tek seferlik temizlik seçenekleri.</p>
-          <a href="#iletisim" class="service-link">Teklif Al →</a>
+          <p>Evinizin her köşesini uzman ekibimizle pırıl pırıl hale getiriyoruz. Düzenli ve tek seferlik seçenekler.</p>
+          <a href="#iletisim" class="service-card-link">Teklif Al →</a>
         </div>
-        <div class="service-card scroll-animate">
-          <span class="service-icon">🏢</span>
+        <div class="service-card scroll-animate delay-2" style="--card-color:#00c853;--card-color-light:#e8fdf0;">
+          <div class="service-icon-wrap">🏢</div>
           <h3>Ofis &amp; İşyeri Temizliği</h3>
-          <p>İş yerlerinizin hijyenik ve düzenli olması için profesyonel ofis temizlik hizmetleri sunuyoruz.</p>
-          <a href="#iletisim" class="service-link">Teklif Al →</a>
+          <p>İş yerlerinizin hijyenik ve düzenli kalması için profesyonel ofis temizlik hizmetleri.</p>
+          <a href="#iletisim" class="service-card-link">Teklif Al →</a>
         </div>
-        <div class="service-card scroll-animate">
-          <span class="service-icon">🔨</span>
+        <div class="service-card scroll-animate delay-3" style="--card-color:#f59e0b;--card-color-light:#fffbeb;">
+          <div class="service-icon-wrap">🔨</div>
           <h3>İnşaat Sonrası Temizlik</h3>
-          <p>Tadilat ve inşaat sonrası ortaya çıkan tüm kir, toz ve molozları hızla temizliyoruz.</p>
-          <a href="#iletisim" class="service-link">Teklif Al →</a>
+          <p>Tadilat ve inşaat sonrası oluşan kir, toz ve molozları hızla ve eksiksiz temizliyoruz.</p>
+          <a href="#iletisim" class="service-card-link">Teklif Al →</a>
         </div>
-        <div class="service-card scroll-animate">
-          <span class="service-icon">🧹</span>
+        <div class="service-card scroll-animate delay-4" style="--card-color:#7b2ff7;--card-color-light:#f3eaff;">
+          <div class="service-icon-wrap">🧹</div>
           <h3>Derin Temizlik</h3>
-          <p>Ulaşılması güç köşeler dahil tüm alanları derinlemesine temizleyen kapsamlı hizmetimiz.</p>
-          <a href="#iletisim" class="service-link">Teklif Al →</a>
+          <p>Ulaşılması güç tüm köşeler dahil her alanı derinlemesine temizleyen kapsamlı hizmetimiz.</p>
+          <a href="#iletisim" class="service-card-link">Teklif Al →</a>
         </div>
-        <div class="service-card scroll-animate">
-          <span class="service-icon">🪟</span>
+        <div class="service-card scroll-animate delay-5" style="--card-color:#0891b2;--card-color-light:#e0f7fa;">
+          <div class="service-icon-wrap">🪟</div>
           <h3>Cam Temizliği</h3>
-          <p>İç ve dış cam yüzeylerini lekesiz, pırıl pırıl temizliyor; bina dışı camlar dahil hizmet veriyoruz.</p>
-          <a href="#iletisim" class="service-link">Teklif Al →</a>
+          <p>İç ve dış cam yüzeyleri, bina dışı camlar dahil lekesiz ve pırıl pırıl temizlik.</p>
+          <a href="#iletisim" class="service-card-link">Teklif Al →</a>
         </div>
-        <div class="service-card scroll-animate">
-          <span class="service-icon">🛋️</span>
+        <div class="service-card scroll-animate delay-6" style="--card-color:#e11d48;--card-color-light:#ffe4e6;">
+          <div class="service-icon-wrap">🛋️</div>
           <h3>Koltuk &amp; Halı Yıkama</h3>
           <p>Koltuk, kanepe ve halılarınızı özel makinelerimizle derinlemesine yıkıyor, dezenfekte ediyoruz.</p>
-          <a href="#iletisim" class="service-link">Teklif Al →</a>
+          <a href="#iletisim" class="service-card-link">Teklif Al →</a>
         </div>
-        <div class="service-card scroll-animate">
-          <span class="service-icon">🏗️</span>
+        <div class="service-card scroll-animate delay-7" style="--card-color:#d97706;--card-color-light:#fef3c7;">
+          <div class="service-icon-wrap">🏗️</div>
           <h3>Apartman &amp; Site Temizliği</h3>
           <p>Apartman ve site yönetimlerine özel düzenli temizlik anlaşmaları ile bina değerinizi koruyun.</p>
-          <a href="#iletisim" class="service-link">Teklif Al →</a>
+          <a href="#iletisim" class="service-card-link">Teklif Al →</a>
         </div>
-        <div class="service-card scroll-animate">
-          <span class="service-icon">✨</span>
-          <h3>Merdiven &amp; Ortak Alan Temizliği</h3>
+        <div class="service-card scroll-animate delay-8" style="--card-color:#059669;--card-color-light:#d1fae5;">
+          <div class="service-icon-wrap">✨</div>
+          <h3>Merdiven &amp; Ortak Alan</h3>
           <p>Merdiven boşlukları, asansörler ve ortak kullanım alanlarının düzenli hijyenik temizliği.</p>
-          <a href="#iletisim" class="service-link">Teklif Al →</a>
+          <a href="#iletisim" class="service-card-link">Teklif Al →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ABOUT SECTION ===== -->
+  <!-- ===== CTA STRIP ===== -->
+  <section id="cta-strip">
+    <div class="cta-blob cta-blob-1"></div>
+    <div class="cta-blob cta-blob-2"></div>
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-text scroll-animate">
+          <div class="overline">⚡ Hızlı Hizmet</div>
+          <h2>Ücretsiz Keşif &amp;<br/>Fiyat Teklifi Alın</h2>
+          <p>Hemen arayın, uzman ekibimiz en kısa sürede yanınızda olsun.</p>
+        </div>
+        <div class="cta-actions scroll-animate delay-2">
+          <a href="tel:+905352201014" class="btn btn-white btn-lg">📞 Hemen Ara</a>
+          <a href="https://wa.me/905352201014" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-lg">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
   <section id="hakkimizda">
     <div class="container">
       <div class="about-grid">
         <div class="about-content scroll-animate">
+          <div class="section-label">ℹ️ Hakkımızda</div>
           <h2>Beykoz'un <span>Güvenilir</span> Temizlik Firması</h2>
-          <p>Efe Temizlik olarak, Beykoz ve çevresinde 10 yılı aşkın süredir profesyonel temizlik hizmetleri sunuyoruz. Müşterilerimizin güveni ve memnuniyeti bizim en büyük önceliğimizdir.</p>
-          <p>Uzman ve deneyimli ekibimiz, en son temizlik teknolojileri ve çevre dostu ürünlerle evinizi, ofisinizi ve işyerinizi tertemiz ve hijyenik hale getiriyor. Beykoz'un her mahallesine hizmet veren yerel bir firma olarak bölgenin ihtiyaçlarını çok iyi biliyoruz.</p>
+          <p>Efe Temizlik olarak, Beykoz ve çevresinde 10 yılı aşkın süredir profesyonel temizlik hizmetleri sunuyoruz. Müşterilerimizin güveni ve memnuniyeti her zaman birinci önceliğimizdir.</p>
+          <p>Uzman ve deneyimli ekibimiz, en son temizlik teknolojileri ve çevre dostu ürünlerle evinizi, ofisinizi tertemiz ve hijyenik hale getiriyor. Beykoz'un her mahallesine hizmet veren yerel bir firma olarak bölgenin ihtiyaçlarını çok iyi biliyoruz.</p>
           <div class="about-features">
             <div class="about-feature">
-              <div class="about-feature-icon">✅</div>
-              <span>Sigortalı ve güvenilir personel</span>
+              <div class="about-feat-icon" style="background:#e8fdf0;">✅</div>
+              <span>Sigortalı ve güvenlik kontrolünden geçmiş personel</span>
             </div>
             <div class="about-feature">
-              <div class="about-feature-icon">🌿</div>
-              <span>Çevre dostu temizlik ürünleri</span>
+              <div class="about-feat-icon" style="background:#e8f0fe;">🌿</div>
+              <span>Çevre dostu, sertifikalı temizlik ürünleri</span>
             </div>
             <div class="about-feature">
-              <div class="about-feature-icon">⏰</div>
-              <span>Zamanında ve hızlı hizmet</span>
+              <div class="about-feat-icon" style="background:#fff3ee;">⏰</div>
+              <span>Randevuya dakik, hızlı ve zamanında hizmet</span>
             </div>
             <div class="about-feature">
-              <div class="about-feature-icon">💯</div>
+              <div class="about-feat-icon" style="background:#f3eaff;">💯</div>
               <span>%100 müşteri memnuniyeti garantisi</span>
             </div>
           </div>
-          <div style="margin-top: 32px;">
+          <div class="about-cta">
             <a href="tel:+905352201014" class="btn btn-primary">📞 Hemen Ara</a>
+            <a href="#iletisim" class="btn" style="background:var(--off-white);color:var(--text);border:2px solid var(--border);">✉️ Mesaj Gönder</a>
           </div>
         </div>
-        <div class="about-stats scroll-animate">
-          <div class="stat-card">
-            <span class="stat-number" data-target="500">0</span>
-            <span class="stat-label">+ Mutlu Müşteri</span>
+        <div class="about-stats-grid scroll-animate delay-2">
+          <div class="about-stat-card asc-1">
+            <span class="asc-icon">😊</span>
+            <span class="asc-num" data-target="500">0</span>
+            <span class="asc-label">+ Mutlu Müşteri</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-number" data-target="10">0</span>
-            <span class="stat-label">+ Yıl Deneyim</span>
+          <div class="about-stat-card asc-2">
+            <span class="asc-icon">🏆</span>
+            <span class="asc-num" data-target="10">0</span>
+            <span class="asc-label">+ Yıl Deneyim</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-number" data-target="1000">0</span>
-            <span class="stat-label">+ Tamamlanan İş</span>
+          <div class="about-stat-card asc-3">
+            <span class="asc-icon">✅</span>
+            <span class="asc-num" data-target="1000">0</span>
+            <span class="asc-label">+ Tamamlanan İş</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-number">7/24</span>
-            <span class="stat-label">Hizmet</span>
+          <div class="about-stat-card asc-4">
+            <span class="asc-icon">⭐</span>
+            <span class="asc-num">4.9</span>
+            <span class="asc-label">Google Puanı</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHY US SECTION ===== -->
+  <!-- ===== WHY US ===== -->
   <section id="neden-biz">
     <div class="container">
-      <div class="section-title scroll-animate">
-        <h2>Neden Efe Temizlik?</h2>
-        <p>Beykoz'da profesyonel temizlik hizmeti için bizi tercih etmenizin 6 temel nedeni.</p>
+      <div class="section-header scroll-animate">
+        <div class="section-label">⭐ Neden Biz?</div>
+        <h2>Bizi Tercih Etmeniz İçin <span>6 Neden</span></h2>
+        <p>Beykoz'da profesyonel temizlik hizmeti için Efe Temizlik'i seçmenizin temel nedenleri.</p>
       </div>
       <div class="why-grid">
-        <div class="why-card scroll-animate">
+        <div class="why-card scroll-animate delay-1" style="--why-color:#1a73e8;--why-color-light:#e8f0fe;">
           <div class="why-icon">👨‍💼</div>
-          <div class="why-text">
-            <h3>Profesyonel Ekip</h3>
-            <p>Eğitimli, deneyimli ve güvenlik kontrolünden geçmiş uzman personelimizle hizmet veriyoruz.</p>
-          </div>
+          <h3>Profesyonel Ekip</h3>
+          <p>Eğitimli, deneyimli ve güvenlik kontrolünden geçmiş uzman personelimizle yüksek kaliteli hizmet sunuyoruz.</p>
         </div>
-        <div class="why-card scroll-animate">
+        <div class="why-card scroll-animate delay-2" style="--why-color:#00c853;--why-color-light:#e8fdf0;">
           <div class="why-icon">💰</div>
-          <div class="why-text">
-            <h3>Uygun Fiyat Garantisi</h3>
-            <p>Kaliteden ödün vermeden en rekabetçi fiyatlarla hizmet sunuyor, bütçenize saygı gösteriyoruz.</p>
-          </div>
+          <h3>Uygun Fiyat Garantisi</h3>
+          <p>Kaliteden ödün vermeden en rekabetçi fiyatlarla hizmet sunuyor, bütçenize saygı gösteriyoruz.</p>
         </div>
-        <div class="why-card scroll-animate">
+        <div class="why-card scroll-animate delay-3" style="--why-color:#f59e0b;--why-color-light:#fffbeb;">
           <div class="why-icon">⚡</div>
-          <div class="why-text">
-            <h3>Hızlı ve Zamanında Hizmet</h3>
-            <p>Belirlenen randevu saatine sadık kalıyor, acil temizlik taleplerinize anında yanıt veriyoruz.</p>
-          </div>
+          <h3>Hızlı ve Zamanında</h3>
+          <p>Belirlenen randevu saatine kesinlikle sadık kalıyor; acil temizlik taleplerinize anında yanıt veriyoruz.</p>
         </div>
-        <div class="why-card scroll-animate">
+        <div class="why-card scroll-animate delay-4" style="--why-color:#059669;--why-color-light:#d1fae5;">
           <div class="why-icon">🌿</div>
-          <div class="why-text">
-            <h3>Çevre Dostu Ürünler</h3>
-            <p>İnsan ve çevre sağlığına duyarlı, sertifikalı ekolojik temizlik ürünleri kullanıyoruz.</p>
-          </div>
+          <h3>Çevre Dostu Ürünler</h3>
+          <p>İnsan ve çevre sağlığına duyarlı, Avrupa sertifikalı ekolojik temizlik ürünleri kullanıyoruz.</p>
         </div>
-        <div class="why-card scroll-animate">
+        <div class="why-card scroll-animate delay-5" style="--why-color:#7b2ff7;--why-color-light:#f3eaff;">
           <div class="why-icon">🛡️</div>
-          <div class="why-text">
-            <h3>Sigortalı ve Güvenilir Personel</h3>
-            <p>Tüm personelimiz sigortalıdır; evinize ve eşyalarınıza zarar gelmesi durumunda güvenceniz yanınızda.</p>
-          </div>
+          <h3>Sigortalı Personel</h3>
+          <p>Tüm personelimiz sigortalıdır. Evinize veya eşyalarınıza herhangi bir zarar gelmesi durumunda güvenceniz yanınızda.</p>
         </div>
-        <div class="why-card scroll-animate">
+        <div class="why-card scroll-animate delay-6" style="--why-color:#e11d48;--why-color-light:#ffe4e6;">
           <div class="why-icon">🌟</div>
-          <div class="why-text">
-            <h3>%100 Müşteri Memnuniyeti</h3>
-            <p>Hizmetimizden memnun kalmazsanız ücretsiz tekrar geliyor, sorunuzu kesinlikle çözüyoruz.</p>
-          </div>
+          <h3>%100 Memnuniyet</h3>
+          <p>Hizmetimizden memnun kalmazsanız ücretsiz tekrar geliyoruz. Müşteri memnuniyeti bizim için tartışmasız önceliktir.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SERVICE AREAS SECTION ===== -->
+  <!-- ===== SERVICE AREAS ===== -->
   <section id="hizmet-bolgeleri">
     <div class="container">
-      <div class="section-title scroll-animate">
-        <h2>Hizmet Bölgelerimiz</h2>
-        <p>Beykoz'un tüm mahalle ve semtlerine ulaşıyoruz. Bulunduğunuz bölgeyi aşağıda görebilirsiniz.</p>
+      <div class="section-header scroll-animate">
+        <div class="section-label">📍 Hizmet Bölgelerimiz</div>
+        <h2>Beykoz'un <span>Her Noktasına</span> Hizmet</h2>
+        <p>Beykoz'un tüm mahalle ve semtlerine ulaşıyoruz. Hizmet verdiğimiz bölgeleri aşağıda görebilirsiniz.</p>
+      </div>
+      <div class="areas-map-banner scroll-animate">
+        <div class="areas-banner-text">
+          <h3>📍 33 Mahalle ve Semtte Hizmet</h3>
+          <p>Beykoz ilçesinin tamamına ev, ofis ve işyeri temizliği hizmetleri sunuyoruz.</p>
+        </div>
+        <a href="tel:+905352201014" class="btn btn-primary">📞 0535 220 10 14</a>
       </div>
       <div class="areas-tags scroll-animate">
         <span class="area-tag">📍 Anadolu Hisarı</span>
@@ -1722,70 +1931,78 @@
         <span class="area-tag">📍 Yavuz Selim</span>
         <span class="area-tag">📍 Yenimahalle</span>
       </div>
-      <div style="text-align: center; margin-top: 40px;" class="scroll-animate">
-        <p style="color: var(--gray); margin-bottom: 20px;">Bölgenizi listede göremdiniz mi? Bizi arayın, hizmet bölgelerimizi sürekli genişletiyoruz!</p>
-        <a href="tel:+905352201014" class="btn btn-primary">📞 Bizi Arayın</a>
-      </div>
     </div>
   </section>
 
-  <!-- ===== REVIEWS SECTION ===== -->
+  <!-- ===== REVIEWS ===== -->
   <section id="yorumlar">
     <div class="container">
-      <div class="section-title scroll-animate">
-        <h2>Müşteri Yorumları</h2>
-        <p>Müşterilerimizin Efe Temizlik hakkındaki gerçek deneyimleri ve değerlendirmeleri.</p>
+      <div class="section-header scroll-animate">
+        <div class="section-label">⭐ Müşteri Yorumları</div>
+        <h2>Müşterilerimiz <span>Ne Diyor?</span></h2>
+        <p>Efe Temizlik hizmetleri hakkında gerçek müşterilerimizin değerlendirmeleri.</p>
       </div>
       <div class="reviews-grid">
-        <div class="review-card scroll-animate">
+        <div class="review-card scroll-animate delay-1" style="--review-color:#1a73e8;">
+          <span class="review-quote">"</span>
           <div class="review-stars">
             <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
           </div>
-          <p class="review-text">"Ev temizliği için Efe Temizlik'i tercih ettim ve çok memnun kaldım. Ekip son derece titiz ve profesyoneldi. Köşeler, dolapların arkası dahil her yer tertemiz oldu. Kesinlikle tavsiye ederim!"</p>
+          <p class="review-text">Ev temizliği için Efe Temizlik'i tercih ettim ve son derece memnun kaldım. Ekip titiz ve profesyoneldi. Köşeler, dolapların arkası dahil her yer tertemiz oldu. Kesinlikle tavsiye ederim!</p>
+          <div class="review-divider"></div>
           <div class="review-author">
-            <div class="review-avatar" style="background: linear-gradient(135deg, #1a73e8, #00897b);">A</div>
+            <div class="review-avatar" style="background:linear-gradient(135deg,#1a73e8,#00897b);">A</div>
             <div class="review-info">
               <strong>Ayşe Kaya</strong>
-              <span>Ev Temizliği Müşterisi • Kavacık</span>
+              <span>Ev Temizliği Müşterisi — Kavacık</span>
             </div>
           </div>
         </div>
-        <div class="review-card scroll-animate">
+
+        <div class="review-card scroll-animate delay-2" style="--review-color:#00c853;">
+          <span class="review-quote">"</span>
           <div class="review-stars">
             <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
           </div>
-          <p class="review-text">"Ofisimizin inşaat sonrası temizliği için Efe Temizlik'i aradım. Zamanında geldiler, çok hızlı ve düzenli çalıştılar. Fiyatları da gayet uygundu. Artık her ay düzenli temizlik için anlaştık."</p>
+          <p class="review-text">Ofisimizin inşaat sonrası temizliği için Efe Temizlik'i aradım. Zamanında geldiler, çok hızlı ve düzenli çalıştılar. Fiyatları da gayet uygundu. Artık her ay düzenli temizlik için anlaştık.</p>
+          <div class="review-divider"></div>
           <div class="review-author">
-            <div class="review-avatar" style="background: linear-gradient(135deg, #7b2ff7, #f64f59);">M</div>
+            <div class="review-avatar" style="background:linear-gradient(135deg,#7b2ff7,#f64f59);">M</div>
             <div class="review-info">
               <strong>Mehmet Yıldız</strong>
-              <span>Ofis Temizliği Müşterisi • Beykoz Merkez</span>
+              <span>Ofis Temizliği Müşterisi — Beykoz Merkez</span>
             </div>
           </div>
         </div>
-        <div class="review-card scroll-animate">
+
+        <div class="review-card scroll-animate delay-3" style="--review-color:#f59e0b;">
+          <span class="review-quote">"</span>
           <div class="review-stars">
             <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
           </div>
-          <p class="review-text">"Koltuk ve halı yıkama hizmetini aldım, harika bir iş çıkardılar! Yıllardır birikmiş lekeleri tamamen çıkardılar. Kullandıkları ürünler de çevre dostu ve kokusuz, çocuklarım için endişelenmedim."</p>
+          <p class="review-text">Koltuk ve halı yıkama hizmetini aldım, harika bir iş çıkardılar! Yıllardır birikmiş lekeleri tamamen çıkardılar. Kullandıkları ürünler çevre dostu ve kokusuz, çocuklarım için hiç endişe etmedim.</p>
+          <div class="review-divider"></div>
           <div class="review-author">
-            <div class="review-avatar" style="background: linear-gradient(135deg, #f39c12, #e74c3c);">F</div>
+            <div class="review-avatar" style="background:linear-gradient(135deg,#f59e0b,#e74c3c);">F</div>
             <div class="review-info">
               <strong>Fatma Demir</strong>
-              <span>Koltuk Yıkama Müşterisi • Çubuklu</span>
+              <span>Koltuk Yıkama Müşterisi — Çubuklu</span>
             </div>
           </div>
         </div>
-        <div class="review-card scroll-animate">
+
+        <div class="review-card scroll-animate delay-4" style="--review-color:#7b2ff7;">
+          <span class="review-quote">"</span>
           <div class="review-stars">
             <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
           </div>
-          <p class="review-text">"Apartmanımızın merdiven ve ortak alan temizliğini Efe Temizlik yapıyor. Her hafta düzenli geliyor, hiç sorun yaşamadık. Site sakinleri de çok memnun. Güvenilir ve kaliteli bir ekip."</p>
+          <p class="review-text">Apartmanımızın merdiven ve ortak alan temizliğini Efe Temizlik yapıyor. Her hafta düzenli geliyor, hiç sorun yaşamadık. Site sakinleri de çok memnun. Güvenilir ve kaliteli bir ekip.</p>
+          <div class="review-divider"></div>
           <div class="review-author">
-            <div class="review-avatar" style="background: linear-gradient(135deg, #27ae60, #1a73e8);">H</div>
+            <div class="review-avatar" style="background:linear-gradient(135deg,#00c853,#1a73e8);">H</div>
             <div class="review-info">
               <strong>Hasan Çelik</strong>
-              <span>Apartman Temizliği Müşterisi • Paşabahçe</span>
+              <span>Apartman Temizliği Müşterisi — Paşabahçe</span>
             </div>
           </div>
         </div>
@@ -1793,69 +2010,67 @@
     </div>
   </section>
 
-  <!-- ===== CONTACT SECTION ===== -->
+  <!-- ===== CONTACT ===== -->
   <section id="iletisim">
-    <div class="container">
-      <div class="section-title scroll-animate">
-        <h2>İletişim</h2>
-        <p>Ücretsiz fiyat teklifi almak veya hizmetlerimiz hakkında bilgi edinmek için bizimle iletişime geçin.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info scroll-animate">
-          <h3>Bize Ulaşın</h3>
-          <div class="contact-items">
-            <div class="contact-item">
-              <div class="contact-item-icon">📞</div>
-              <div class="contact-item-text">
-                <strong>Telefon</strong>
-                <a href="tel:+905352201014">0535 220 10 14</a>
+    <div class="container" style="padding:0;">
+      <div class="contact-wrapper" style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);margin:80px 24px;">
+        <!-- Info Panel -->
+        <div class="contact-info-panel">
+          <div class="contact-info-blob"></div>
+          <div class="cip-content">
+            <div class="section-label">📞 Bize Ulaşın</div>
+            <h2>Ücretsiz Teklif<br/>Alın</h2>
+            <p>Hizmet almak istediğiniz konu hakkında bizi arayın veya mesaj gönderin. En kısa sürede sizinle iletişime geçelim.</p>
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="ci-icon">📞</div>
+                <div>
+                  <div class="ci-label">Telefon</div>
+                  <div class="ci-value"><a href="tel:+905352201014">0535 220 10 14</a></div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon">💬</div>
+                <div>
+                  <div class="ci-label">WhatsApp</div>
+                  <div class="ci-value"><a href="https://wa.me/905352201014" target="_blank" rel="noopener noreferrer">0535 220 10 14</a></div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon">📧</div>
+                <div>
+                  <div class="ci-label">E-posta</div>
+                  <div class="ci-value"><a href="mailto:info@efetemizlik.com.tr">info@efetemizlik.com.tr</a></div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon">📍</div>
+                <div>
+                  <div class="ci-label">Adres</div>
+                  <div class="ci-value">Kürşad Cd., Beykoz, İstanbul</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon">⏰</div>
+                <div>
+                  <div class="ci-label">Çalışma Saatleri</div>
+                  <div class="ci-value">7/24 Hizmet</div>
+                </div>
               </div>
             </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">💬</div>
-              <div class="contact-item-text">
-                <strong>WhatsApp</strong>
-                <a href="https://wa.me/905352201014" target="_blank" rel="noopener noreferrer">0535 220 10 14</a>
-              </div>
+            <div class="contact-social">
+              <a href="#" class="cs-link" aria-label="Facebook">📘</a>
+              <a href="#" class="cs-link" aria-label="Instagram">📸</a>
+              <a href="#" class="cs-link" aria-label="Twitter">🐦</a>
+              <a href="#" class="cs-link" aria-label="YouTube">▶️</a>
             </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">📧</div>
-              <div class="contact-item-text">
-                <strong>E-posta</strong>
-                <a href="mailto:info@efetemizlik.com.tr">info@efetemizlik.com.tr</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">📍</div>
-              <div class="contact-item-text">
-                <strong>Adres</strong>
-                <span>Kürşad Cd., Beykoz, İstanbul</span>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">🌐</div>
-              <div class="contact-item-text">
-                <strong>Website</strong>
-                <a href="https://efetemizlik.com.tr" target="_blank" rel="noopener noreferrer">efetemizlik.com.tr</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">⏰</div>
-              <div class="contact-item-text">
-                <strong>Çalışma Saatleri</strong>
-                <span>7/24 Hizmet</span>
-              </div>
-            </div>
-          </div>
-          <div class="social-links">
-            <a href="#" class="social-link facebook" aria-label="Facebook">📘</a>
-            <a href="#" class="social-link instagram" aria-label="Instagram">📸</a>
-            <a href="#" class="social-link twitter" aria-label="Twitter">🐦</a>
-            <a href="#" class="social-link youtube" aria-label="YouTube">▶️</a>
           </div>
         </div>
-        <div class="contact-form-wrapper scroll-animate">
-          <h3>Fiyat Teklifi Alın</h3>
+
+        <!-- Form Panel -->
+        <div class="contact-form-panel">
+          <h3>Fiyat Teklifi İsteyin</h3>
+          <p>Formu doldurun, sizi en kısa sürede arayalım.</p>
           <form class="contact-form" id="contact-form">
             <div class="form-row">
               <div class="form-group">
@@ -1876,7 +2091,7 @@
             <div class="form-group">
               <label for="service">Hizmet Türü</label>
               <select id="service" name="service">
-                <option value="">-- Hizmet Seçiniz --</option>
+                <option value="">— Hizmet Seçiniz —</option>
                 <option value="ev">Ev Temizliği</option>
                 <option value="ofis">Ofis &amp; İşyeri Temizliği</option>
                 <option value="insaat">İnşaat Sonrası Temizlik</option>
@@ -1884,7 +2099,7 @@
                 <option value="cam">Cam Temizliği</option>
                 <option value="koltuk">Koltuk &amp; Halı Yıkama</option>
                 <option value="apartman">Apartman &amp; Site Temizliği</option>
-                <option value="merdiven">Merdiven &amp; Ortak Alan Temizliği</option>
+                <option value="merdiven">Merdiven &amp; Ortak Alan</option>
                 <option value="diger">Diğer</option>
               </select>
             </div>
@@ -1897,28 +2112,29 @@
             </button>
           </form>
           <div class="form-success" id="form-success">
-            <span style="font-size: 2rem;">✅</span>
-            <h4 style="margin: 12px 0 8px; color: var(--secondary-dark);">Mesajınız İletildi!</h4>
-            <p style="font-size: 0.9rem; color: var(--gray);">En kısa sürede sizi arayacağız. Acil durumlarda 0535 220 10 14 numaralı hattı arayabilirsiniz.</p>
+            <div class="success-icon">✅</div>
+            <h4>Mesajınız İletildi!</h4>
+            <p>En kısa sürede sizi arayacağız. Acil durumlarda <a href="tel:+905352201014" style="color:var(--primary);font-weight:700;">0535 220 10 14</a> numarası ile bize ulaşabilirsiniz.</p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Google Maps -->
+  <!-- MAP -->
+  <div class="map-section">
+    <div class="container">
       <div class="map-wrapper scroll-animate">
         <iframe
-          title="Efe Temizlik Konum - Beykoz İstanbul"
+          title="Efe Temizlik Konum — Beykoz, İstanbul"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48153.60584840449!2d29.079261!3d41.121944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7c1e0d54c5f%3A0x3d6bcef83a7db13!2sBeykoz%2C%20Istanbul!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
-          width="100%"
-          height="360"
-          style="border:0;"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- ===== FOOTER ===== -->
   <footer id="footer">
@@ -1945,7 +2161,7 @@
             <a href="#hakkimizda">Hakkımızda</a>
             <a href="#neden-biz">Neden Biz?</a>
             <a href="#hizmet-bolgeleri">Hizmet Bölgeleri</a>
-            <a href="#yorumlar">Müşteri Yorumları</a>
+            <a href="#yorumlar">Yorumlar</a>
             <a href="#iletisim">İletişim</a>
           </div>
         </div>
@@ -1957,38 +2173,38 @@
             <a href="#hizmetler">İnşaat Sonrası</a>
             <a href="#hizmetler">Derin Temizlik</a>
             <a href="#hizmetler">Cam Temizliği</a>
-            <a href="#hizmetler">Halı Yıkama</a>
+            <a href="#hizmetler">Halı &amp; Koltuk</a>
             <a href="#hizmetler">Apartman Temizliği</a>
           </div>
         </div>
         <div class="footer-col">
           <h4>İletişim</h4>
-          <div class="footer-contact-items">
+          <div class="footer-contact-list">
             <div class="footer-contact-item">
-              <span>📞</span>
+              <span class="fci-icon">📞</span>
               <a href="tel:+905352201014">0535 220 10 14</a>
             </div>
             <div class="footer-contact-item">
-              <span>💬</span>
+              <span class="fci-icon">💬</span>
               <a href="https://wa.me/905352201014" target="_blank" rel="noopener noreferrer">WhatsApp: 0535 220 10 14</a>
             </div>
             <div class="footer-contact-item">
-              <span>📧</span>
+              <span class="fci-icon">📧</span>
               <a href="mailto:info@efetemizlik.com.tr">info@efetemizlik.com.tr</a>
             </div>
             <div class="footer-contact-item">
-              <span>📍</span>
+              <span class="fci-icon">📍</span>
               <span>Kürşad Cd., Beykoz, İstanbul</span>
             </div>
             <div class="footer-contact-item">
-              <span>🌐</span>
+              <span class="fci-icon">🌐</span>
               <a href="https://efetemizlik.com.tr" target="_blank" rel="noopener noreferrer">efetemizlik.com.tr</a>
             </div>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Efe Temizlik - Tüm Hakları Saklıdır.</p>
+        <p>© 2026 Efe Temizlik — Tüm Hakları Saklıdır.</p>
         <div class="footer-bottom-links">
           <a href="#">Gizlilik Politikası</a>
           <a href="#">Kullanım Koşulları</a>
@@ -1998,44 +2214,35 @@
     </div>
   </footer>
 
-  <!-- ===== WHATSAPP BUTTON ===== -->
-  <a href="https://wa.me/905352201014" id="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişime geçin">
-    💬
-  </a>
+  <!-- WhatsApp Fixed Button -->
+  <a href="https://wa.me/905352201014" id="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişime geçin">💬</a>
 
-  <!-- ===== SCROLL TO TOP BUTTON ===== -->
-  <button id="scroll-top" aria-label="Yukarı çık">
-    ↑
-  </button>
+  <!-- Scroll To Top -->
+  <button id="scroll-top" aria-label="Yukarı çık">↑</button>
 
   <script>
-    // ===== NAVBAR SCROLL =====
-    const navbar = document.getElementById('navbar');
-    const scrollTopBtn = document.getElementById('scroll-top');
+    // ===== NAVBAR =====
+    var navbar = document.getElementById('navbar');
+    var scrollTopBtn = document.getElementById('scroll-top');
 
     window.addEventListener('scroll', function () {
-      if (window.scrollY > 60) {
+      if (window.scrollY > 80) {
         navbar.classList.add('scrolled');
         scrollTopBtn.classList.add('visible');
       } else {
         navbar.classList.remove('scrolled');
         scrollTopBtn.classList.remove('visible');
       }
-
       // Active nav link
-      const sections = document.querySelectorAll('section[id]');
-      const navLinks = document.querySelectorAll('.nav-menu a');
-      let current = '';
-      sections.forEach(function (section) {
-        if (window.scrollY >= section.offsetTop - 100) {
-          current = section.getAttribute('id');
-        }
+      var sections = document.querySelectorAll('section[id]');
+      var navLinks = document.querySelectorAll('.nav-menu a');
+      var current = '';
+      sections.forEach(function (s) {
+        if (window.scrollY >= s.offsetTop - 120) current = s.id;
       });
-      navLinks.forEach(function (link) {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-          link.classList.add('active');
-        }
+      navLinks.forEach(function (l) {
+        l.classList.remove('active');
+        if (l.getAttribute('href') === '#' + current) l.classList.add('active');
       });
     });
 
@@ -2044,19 +2251,16 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // ===== HAMBURGER MENU =====
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-
+    // ===== HAMBURGER =====
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobile-menu');
     hamburger.addEventListener('click', function () {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', String(isOpen));
+      var open = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', String(open));
     });
-
-    // Close mobile menu on link click
-    document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
-      link.addEventListener('click', function () {
+    document.querySelectorAll('.mobile-nav-link').forEach(function (l) {
+      l.addEventListener('click', function () {
         mobileMenu.classList.remove('open');
         hamburger.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
@@ -2064,20 +2268,16 @@
     });
 
     // ===== SCROLL ANIMATIONS =====
-    const scrollElements = document.querySelectorAll('.scroll-animate');
-
-    const observer = new IntersectionObserver(function (entries) {
+    var scrollEls = document.querySelectorAll('.scroll-animate');
+    var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
-
-    scrollElements.forEach(function (el) {
-      observer.observe(el);
-    });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    scrollEls.forEach(function (el) { observer.observe(el); });
 
     // ===== COUNTER ANIMATION =====
     function animateCounter(el, target, duration) {
@@ -2085,77 +2285,62 @@
       var step = Math.ceil(target / (duration / 16));
       var timer = setInterval(function () {
         start += step;
-        if (start >= target) {
-          start = target;
-          clearInterval(timer);
-        }
+        if (start >= target) { start = target; clearInterval(timer); }
         el.textContent = start;
       }, 16);
     }
-
     var countersStarted = false;
     var counterObserver = new IntersectionObserver(function (entries) {
       if (entries[0].isIntersecting && !countersStarted) {
         countersStarted = true;
         document.querySelectorAll('[data-target]').forEach(function (el) {
-          var target = parseInt(el.getAttribute('data-target'), 10);
-          animateCounter(el, target, 1800);
+          animateCounter(el, parseInt(el.getAttribute('data-target'), 10), 1800);
         });
       }
     }, { threshold: 0.4 });
-
-    var statsSection = document.querySelector('.about-stats');
-    if (statsSection) {
-      counterObserver.observe(statsSection);
-    }
+    var statsEl = document.querySelector('.stats-strip-inner') || document.querySelector('.about-stats-grid');
+    if (statsEl) counterObserver.observe(statsEl);
 
     // ===== CONTACT FORM =====
     document.getElementById('contact-form').addEventListener('submit', function (e) {
       e.preventDefault();
       var nameEl = document.getElementById('name');
       var phoneEl = document.getElementById('phone');
-      var nameError = document.getElementById('name-error');
-      var phoneError = document.getElementById('phone-error');
+      var nameErr = document.getElementById('name-error');
+      var phoneErr = document.getElementById('phone-error');
       var valid = true;
 
-      // Reset previous errors
       [nameEl, phoneEl].forEach(function (el) { el.setAttribute('aria-invalid', 'false'); });
-      [nameError, phoneError].forEach(function (el) { el.classList.remove('visible'); });
+      [nameErr, phoneErr].forEach(function (el) { el.classList.remove('visible'); });
 
       if (!nameEl.value.trim()) {
         nameEl.setAttribute('aria-invalid', 'true');
-        nameError.classList.add('visible');
+        nameErr.classList.add('visible');
         nameEl.focus();
         valid = false;
       }
-
       if (!phoneEl.value.trim()) {
         phoneEl.setAttribute('aria-invalid', 'true');
-        phoneError.classList.add('visible');
-        if (valid) { phoneEl.focus(); }
+        phoneErr.classList.add('visible');
+        if (valid) phoneEl.focus();
         valid = false;
       }
+      if (!valid) return;
 
-      if (!valid) { return; }
-
-      // Show success message
       this.style.display = 'none';
       document.getElementById('form-success').classList.add('show');
     });
 
-    // ===== SMOOTH ANCHOR SCROLL =====
-    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-      anchor.addEventListener('click', function (e) {
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
         var target = document.querySelector(this.getAttribute('href'));
         if (target) {
           e.preventDefault();
-          var offset = 70;
-          var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-          window.scrollTo({ top: top, behavior: 'smooth' });
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 75, behavior: 'smooth' });
         }
       });
     });
   </script>
-
 </body>
 </html>
